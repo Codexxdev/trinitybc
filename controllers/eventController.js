@@ -13,7 +13,7 @@ cloudinary.config({
 
 
 // get client events
-// get => /api/client/events
+// get => /api/client/event
 const getEvents = asyncHandler(async (req, res) => {
     const { month, next } = req.query
     const query = {}
