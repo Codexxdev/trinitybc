@@ -1,6 +1,8 @@
 import Image from "next/image"
+import { useRouter } from 'next/router'
 
 const Sections = () => {
+    const router = useRouter()
     return (
         <div className="!mt-10 pb-10">
             <div className="container lg:px-[2rem] space-y-10 md:space-y-20">
@@ -22,7 +24,9 @@ const Sections = () => {
                             To be a People zealous for God’s Holiness and Glory in a Joyful and loving society.
                         </p>
                         <div className=" flex  !mt-10 mb-5">
-                            <h1 className="uppercase text-sm md:text-base
+                            <h1
+                                onClick={() => router.push('/about')}
+                                className="uppercase text-sm md:text-base
                             max-w-[230px] md:max-w-[300px] px-3 py-2
                             bg-primary-light text-[white] cursor-pointer hover:scale-105 hover:shadow-xl rounded-md
                                ">Read about Tbca</h1>
