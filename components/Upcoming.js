@@ -24,7 +24,7 @@ const Upcoming = ({event, defaultEvent}) => {
     }
     return (
         <div className="grid grid-cols-12 gap-2 items-center px-2 md:px-0 ">
-            <div className="order-last rounded-md col-span-4 sm:col-span-5 md:col-span-6  w-full sm:h-full h-[calc(100%-30px)] relative ">
+            <div className="order-last md:order-first rounded-md col-span-4 sm:col-span-5 md:col-span-6  w-full sm:h-full h-[calc(100%-30px)] relative ">
                 <Image src={event ? event?.imageUrl?.url : defaultEvent?.imageUrl?.url}
                     className="object-cover w-full h-full"
                     layout="fill"
