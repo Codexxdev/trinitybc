@@ -57,7 +57,7 @@ const Hero = () => {
         {/* col 2 */}
             <div className="lg:col-span-6 xl:col-span-7">
                 <div className="w-full h-[250px] sm:h-[400px] lg:h-[500px] relative">
-                    <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1651308450/Global/hero_p9ln3m.jpg"
+                    <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1655537083/Global/aaron-burden-vKBdY7e7KFk-unsplash_1_hbztnw.jpg"
                         className="object-cover w-full h-full"
                         layout="fill"
                         blurDataURL={blur}
