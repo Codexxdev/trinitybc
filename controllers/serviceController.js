@@ -18,7 +18,7 @@ const getServices = asyncHandler(async (req, res) => {
     const allServices = await Service.find({}).sort('endTime')
 
     const services = allServices.filter(service => new Date(service.endTime) > new Date())
-    const defaultService = allServices[0]
+    const defaultService = allServices[allServices.length - 1]
 
     res.status(200).json({
         success: "true",
