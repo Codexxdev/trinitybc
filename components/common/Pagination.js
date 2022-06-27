@@ -30,11 +30,15 @@ const Pagination = ({ resPerPage, page, totalItems, keyword }) => {
                 totalItemsCount={totalItems}
                 onChange={handlePagination}
                 pageRangeDisplayed={3}
-                innerClass='border border-gray-300/90 flex rounded-r-lg rounded-l-lg'
+                hideNavigation={true}
+                firstPageText='First'
+                lastPageText= 'Last'
+                innerClass=' space-x-1 flex rounded-r-lg rounded-l-lg'
                 activeClass='bg-[#0d6efd]'
-                itemClass='border-r border-gray-300/90 py-1 px-4'
+                itemClass='border border-[#0d6efd]/50 py-1 px-3'
                 linkClass='text-[#0d6efd]'
-                itemClassLast="!border-r-0 "
+                itemClassLast="rounded-l rounded-2xl"
+                itemClassFirst= "rounded-r rounded-2xl"
                 activeLinkClass="!text-[#ffffff]"
             />  
         </div>
