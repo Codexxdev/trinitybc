@@ -36,7 +36,7 @@ const NewsDetails = () => {
           </div>
           <div className="max-w-screen-sm mx-auto mt-2 space-y-8 ">
             <div className="flex flex-col space-y-2 px-2">
-                <div className=" font-light text-justify">
+                <div className="output font-light text-justify">
                     {parse(news.body)}
                 </div>
             </div>

@@ -15,38 +15,24 @@ html, body {
     text-size-adjust: none !important;
 }
 
-/* Pagination */
-.page-item.active .page-link {
-    background-color: #e61e4d;
-    border-color: #e61e4d;
-}
 
-.page-link {
-    color: #e61e4d;
-}
-
-.page-link:hover {
-    color: #e61e4d;
-}
-
-.itemClass {
-    padding: 5px;
-}
-
-.output p {
-    color: red;
+.output h1 {
+    text-align: center;
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
 
 }
 
 .output h2 {
-    color: green;
-    font-weight: 500;
-    text-transform: uppercase;
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
 }
 
 .output blockquote {
     padding-left: 5px;
     border-left: 3px solid gray;
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
 }
 
 .output ol {
@@ -56,4 +42,5 @@ html, body {
 
 .output a {
     color: blue;
+    text-decoration-line: underline;
 }
