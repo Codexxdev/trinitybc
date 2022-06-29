@@ -1,8 +1,35 @@
 import Image from "next/image"
 import { useRouter } from 'next/router'
+import { useSelector } from "react-redux"
+import parse from 'html-react-parser';
+import { useState, useEffect } from "react";
+
 
 const Sections = () => {
+    const [body, setBody] = useState('')
     const router = useRouter()
+    const { news } = useSelector(state => state.clientEvent)
+
+
+    useEffect(() => {
+        parser(news.body)
+    }, [news])
+
+    const truncate = (des) => {
+        if (des.length >= 350) {
+            return des.substr(0, 350) + "..."
+        } else {
+            return des
+        }
+    }
+
+    const parser = (html) => {
+        const short = truncate(html)
+        setBody(parse(short)) 
+    }
+
+
+
     return (
         <div className="!mt-10 pb-10">
             <div className="container lg:px-[2rem] space-y-10 md:space-y-20">
@@ -46,14 +73,18 @@ const Sections = () => {
                     </div>
                     <div className="flex flex-col px-2 md:px-0 space-y-2">
                         <h1 className="uppercase text-primary-light">News</h1>
-                        <h1 className="uppercase font-medium text-xl md:text-2xl">Church Building Project</h1>
+                        <h1 className="uppercase font-medium text-xl md:text-2xl">{news.title}</h1>
                         <p className="text-left font-light">
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters as opposed to using Content here content here making it look like readable English Many desktop publishing packages and web page editors now use Lorem Ipsum
+                            {body && body}
                         </p>
                         <div className="flex !mt-10 space-x-3  ">
-                            <h1 className="uppercase text-sm md:text-base  px-5 py-2 text-center
+                            <h1
+                                onClick={() => router.push(`/events/news/${news._id}`)}
+                                className="uppercase text-sm md:text-base  px-5 py-2 text-center
                             bg-primary-light text-[white] cursor-pointer hover:scale-105 hover:shadow-xl rounded-md ">Read More</h1>
-                            <h1 className="uppercase text-sm md:text-base  px-5 py-2 text-center rounded-md
+                            <h1
+                                onClick={()=> router.push('/give')}
+                                className="uppercase text-sm md:text-base  px-5 py-2 text-center rounded-md
                             bg-primary-dark text-[white] cursor-pointer hover:scale-105 hover:shadow-xl">Give</h1>
                         </div>
                     </div>
