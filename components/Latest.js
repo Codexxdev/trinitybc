@@ -43,7 +43,7 @@ const Latest = ({latest}) => {
                                                 : router.push(`/resources/biblestudy/${list._id}`)
 
                                 } }
-                                className="w-full flex flex-row-reverse items-center md:flex-col md:rounded-md bg-[white] space-x-1 md:space-x-0
+                                className="w-full flex flex-row-reverse items-center md:flex-col md:rounded-md bg-[white] space-x-2 md:space-x-0
                             md:py-0 md:px-0 px-1 py-2 shadow-sm md:shadow-xl hover:md:shadow-2xl hover:md:scale-105 cursor-pointer">
                                 <div className="w-[80px] h-[75px] md:w-full md:h-[170px] rounded-lg md:rounded-b-none md:rounded-t-md relative">
                                     <Image src={list.imageUrl?.url ? list.imageUrl?.url : defaultImage}
