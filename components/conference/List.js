@@ -81,13 +81,16 @@ const List = () => {
                                                         </h1>
 
                                                     </div>
-                                                    <h1 className="capitalize !mt-5">{conference.title}</h1>
-                                                    <div className="flex items-center !mt-5 justify-between pr-5 md:pr-0">
+                                                    <h1 className="capitalize md:!mt-5">{conference.title}</h1>
+                                                    <h1 className="md:hidden text-xs tracking-wider uppercase ">
+                                                        {format(new Date(conference.startDate), 'MMM, do yyyy')}
+                                                    </h1>
+                                                    <div className="flex items-center md:!mt-5 justify-between pr-5 md:pr-0">
                                                         <div className="flex items-center ml-[6px]">
                                                             {lister(index)}
                                                         </div>
 
-                                                        <h1 className="text-xs tracking-wider uppercase ">
+                                                        <h1 className="hidden md:block text-xs tracking-wider uppercase ">
                                                             {format(new Date(conference.startDate), 'MMM, do yyyy')}
                                                         </h1>
                                                     </div>

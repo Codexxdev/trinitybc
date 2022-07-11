@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
+import { useDispatch } from "react-redux"
+import { getAdminEmails } from '../../../redux/features/emails';
+import { getAdminRegisters } from '../../../redux/features/register';
+
+
 
 
 const grid = [
     {
         topic: "mailing list",
-        number: 15,
+        number: 0,
         path: "/emails",
         id: 1
     },
     {
         topic: "conference register",
-        number: 20,
+        number: 0,
         path: "/conference",
         id: 2
     },
@@ -20,12 +25,27 @@ const grid = [
 
 const Register = ({children}) => {
     const router = useRouter()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         if (router.route === "/admin/events") {
             router.push("/admin/events/upcoming")
         }
-    }, [])
+        dispatch(getAdminEmails()).then((result) => {
+            if (result.error) {
+                console.log(result.error)
+            } else {
+                grid[0].number = result.payload.emails.length
+            }
+        })
+        dispatch(getAdminRegisters()).then((result) => {
+            if (result.error) {
+                console.log(result.error)
+            } else {
+                grid[1].number = result.payload.registers.length
+            }
+        })
+    }, [dispatch])
 
 
     return (

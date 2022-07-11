@@ -123,23 +123,27 @@ const Body = () => {
                     <div className="max-w-screen-lg mx-auto mt- grid grid-cols-1 gap-7 md:grid-cols-2">
                         <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-center space-x-4">
                             <h1 className="uppercase font-medium text-primary-dark">Contact us via</h1>
-                            <div className="flex flex-col space-y-2">
-                                <h1 className="text-sm "><span className="font-medium uppercase">Email:</span> trinitybaptist@gmail.com</h1>
-                                <h1 className="text-sm "><span className="font-medium uppercase">Phone:</span> 070 306 745 129</h1>
-                                <h1 className="text-sm "><span className="font-medium uppercase">Social Media:</span> facebook, instagram</h1>
+                            <div className="flex flex-col items-center md:items-start space-y-2">
+                                <h1 className="text-sm "><span className="font-medium uppercase">Email:</span> trinitybaptistchurchabuja@gmail.com </h1>
+                                <h1 className="text-sm "><span className="font-medium uppercase">Phone:</span> 0903 888 1689 </h1>
+                                <h1 className="text-sm space-x-1 ">
+                                    <span className="font-medium uppercase">Social Media:</span>
+                                    <span><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAU&url=https%3A%2F%2Fwww.facebook.com%2FTrinityAbuja%2F&usg=AOvVaw3QTaeA8X43LW2QfQufo2os" target="_blank">Facebook,</a></span> 
+                                    <span><a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAc&url=https%3A%2F%2Fwww.instagram.com%2Ftrinityabuja_%2F&usg=AOvVaw2gaudocp3es_is4bTSFRo3" target="_blank">Instagram</a></span>
+                                </h1>
                             </div>
                         </div>
                         <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 items-center space-x-4">
                             <h1 className="uppercase font-medium text-primary-dark">Services</h1>
                             <div className="flex flex-col space-y-2">
-                                <div className="flex flex-col space-y-1">
+                                <div className="flex flex-col items-center md:items-start space-y-1">
                                     <h1 className="text-primary-light text-center md:text-left uppercase font-medium">Lord's day services</h1>
                                     <h1 className="text-sm "><span className="font-medium uppercase">Sunday school:</span> 9:00AM - 10:30AM</h1>
                                     <h1 className="text-sm "><span className="font-medium uppercase">Morning Service:</span> 10:00AM - 11:30AM</h1>
                                     <h1 className="text-sm "><span className="font-medium uppercase">Evening Service:</span> 4:00PM - 5:30PM</h1>
                                 </div>
-                                <h1 className="text-sm "><span className="font-medium uppercase text-primary-light">Tuesday Bible Study:</span> 6:00PM - 7:30PM</h1>
-                                <h1 className="text-sm "><span className="font-medium uppercase text-primary-light">Friday Prayer Meeting:</span> 6:00PM - 7:30PM</h1>
+                                <h1 className="text-sm text-center md:text-start "><span className="font-medium uppercase text-primary-light">Tuesday Bible Study:</span> 6:00PM - 7:30PM</h1>
+                                <h1 className="text-sm  text-center md:text-start"><span className="font-medium uppercase text-primary-light">Friday Prayer Meeting:</span> 6:00PM - 7:30PM</h1>
                             </div>
                         </div>
                     </div>

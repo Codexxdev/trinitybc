@@ -1,23 +1,30 @@
 import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
+import { useDispatch, useSelector } from "react-redux"
+import { getAdminEvents } from '../../../redux/features/events'
+import { getAdminNews } from '../../../redux/features/news';
+import { getAdminServices } from '../../../redux/features/services';
+
+
+
 
 
 const grid = [
     {
         topic: "upcoming events",
-        number: 15,
+        number: 0,
         path: "/upcoming",
         id: 1
     },
     {
         topic: "news",
-        number: 20,
+        number: 0,
         path: "/news",
         id: 2
     },
     {
         topic: "services",
-        number: 3,
+        number: 0,
         path: "/services",
         id: 3
     },
@@ -27,12 +34,34 @@ const grid = [
 const Events = ({ children }) => {
     const [active, setActive] = useState("upcoming events")
     const router = useRouter()
+    const dispatch = useDispatch()
 
     useEffect(() => {
         if (router.route === "/admin/events") {
             router.push("/admin/events/upcoming")
         }
-    }, [])
+        dispatch(getAdminEvents()).then((result) => {
+            if (result.error) {
+                console.log(result.error)
+            } else {
+                grid[0].number = result.payload.events.length
+            }
+        })
+        dispatch(getAdminNews()).then((result) => {
+            if (result.error) {
+                console.log(result.error)
+            } else {
+                grid[1].number = result.payload.news.length
+            }
+        })
+        dispatch(getAdminServices()).then((result) => {
+            if (result.error) {
+                console.log(result.error)
+            } else {
+                grid[2].number = result.payload.services.length
+            }
+        })
+    }, [dispatch])
 
 
     return (

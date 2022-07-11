@@ -14,11 +14,6 @@ const ministriesData = [
         body: "The children department ranges from the little babies to the teenagers. The children of Trinity Baptist Church have their Sunday school classes on Sunday mornings by 9am-10am where they receive instructions from God's word and are taken through catechisms and creeds, after which they join the service to listen to the word of God as it it being preached Sunday after Sunday. Th children are always helpful in doing chores around the church, and they make presentations on occasions such as birthdays, children's day etc. It is the prayer of Trinity Baptist Church that these little ones will grow up to truly know and love God as they are being taught and catechized.",
         id: 3
     },
-    {
-        title: "Sunday School",
-        body: "rurur",
-        id: 4
-    }
 ]
 
 

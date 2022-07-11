@@ -71,9 +71,15 @@ const Footer = () => {
                         <div className="flex flex-col space-y-1 md:space-x-2 justify-center md:flex-row items-center">
                             <h1 className="text-sm lg:text-base">follow us on:</h1>
                             <div className="space-x-3">
-                                <FacebookIcon className="text-xl lg:text-2xl " />
-                                <InstagramIcon className="text-xl lg:text-2xl " />
-                                <YouTubeIcon className="text-xl lg:text-2xl " />
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAU&url=https%3A%2F%2Fwww.facebook.com%2FTrinityAbuja%2F&usg=AOvVaw3QTaeA8X43LW2QfQufo2os" target="_blank">
+                                    <FacebookIcon className="text-xl lg:text-2xl " />
+                                </a>
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAc&url=https%3A%2F%2Fwww.instagram.com%2Ftrinityabuja_%2F&usg=AOvVaw2gaudocp3es_is4bTSFRo3" target="_blank">
+                                    <InstagramIcon className="text-xl lg:text-2xl " />
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCQseR5f03EmwlbIGyFTImlQ" target="_blank">
+                                    <YouTubeIcon className="text-xl lg:text-2xl " />
+                                </a>
                             </div>
                         </div>
                         <div className="flex flex-col space-y-1">
@@ -120,9 +126,9 @@ const Footer = () => {
                         </div>
                         <div className="flex flex-col w-full md:!w-fit text-center md:text-left space-y-3">
                             <h1 className="text-sm lg:text-base font-medium mb-4 uppercase">CONTACT</h1>
-                            <h2 className="text-xs lg:text-sm uppercase">M-F 8AM - 5PM</h2>
-                            <h2 className="text-xs lg:text-sm ">+234 902 999 829</h2>
-                            <h2 className="text-xs lg:text-sm ">+234 817 562 828</h2>
+                            <h2 className="text-xs lg:text-sm uppercase">M-F 9AM - 5PM</h2>
+                            <h2 className="text-xs lg:text-sm ">+234 903 888 1689</h2>
+                            <h2 className="text-xs lg:text-sm ">trinitybaptistchurchabuja@gmail.com</h2>
                             <Link href="/signin">
                                 <a>
                                     <h2 className="text-xs cursor-pointer uppercase lg:text-sm ">Admin signin</h2>
