@@ -71,13 +71,13 @@ const Footer = () => {
                         <div className="flex flex-col space-y-1 md:space-x-2 justify-center md:flex-row items-center">
                             <h1 className="text-sm lg:text-base">follow us on:</h1>
                             <div className="space-x-3">
-                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAU&url=https%3A%2F%2Fwww.facebook.com%2FTrinityAbuja%2F&usg=AOvVaw3QTaeA8X43LW2QfQufo2os" target="_blank">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAU&url=https%3A%2F%2Fwww.facebook.com%2FTrinityAbuja%2F&usg=AOvVaw3QTaeA8X43LW2QfQufo2os" target="_blank" rel="noreferrer">
                                     <FacebookIcon className="text-xl lg:text-2xl " />
                                 </a>
-                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAc&url=https%3A%2F%2Fwww.instagram.com%2Ftrinityabuja_%2F&usg=AOvVaw2gaudocp3es_is4bTSFRo3" target="_blank">
+                                <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjRl_ewhPH4AhWFwYUKHW7fBTQQ9zB6BAg2EAc&url=https%3A%2F%2Fwww.instagram.com%2Ftrinityabuja_%2F&usg=AOvVaw2gaudocp3es_is4bTSFRo3" target="_blank" rel="noreferrer">
                                     <InstagramIcon className="text-xl lg:text-2xl " />
                                 </a>
-                                <a href="https://www.youtube.com/channel/UCQseR5f03EmwlbIGyFTImlQ" target="_blank">
+                                <a href="https://www.youtube.com/channel/UCQseR5f03EmwlbIGyFTImlQ" target="_blank" rel="noreferrer">
                                     <YouTubeIcon className="text-xl lg:text-2xl " />
                                 </a>
                             </div>
@@ -118,7 +118,7 @@ const Footer = () => {
                             <h2 className="text-xs lg:text-sm ">Galadimawa, Suncity Estate,</h2>
                             <h2 className="text-xs lg:text-sm ">Abuja FCT</h2>
                             <Link href="https://www.google.com/maps/place/Trinity+Baptist+Church,+Abuja/@8.989531,7.433382,16z/data=!4m5!3m4!1s0x0:0x95fb206cd5ea74f5!8m2!3d8.9895309!4d7.4333819?hl=en">
-                                <a target="_blank">
+                                <a target="_blank" rel="noreferrer">
                                     <h2 className="text-xs lg:text-sm uppercase !mt-6 underline cursor-pointer hover:scale-105 ">Maps and Direction </h2>
                                 </a>
                             </Link>
