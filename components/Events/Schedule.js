@@ -53,7 +53,7 @@ const Schedule = ({ sessions, startDate, endDate }) => {
                                             </div>
                                             <div className="flex flex-col space-y-2">
                                                 <h1 className="font-medium uppercase">{session.topic}</h1>
-                                                <p className="font-light text-sm text-justify" >Matthew 16:18 promises that Jesus Christ is building His church and that the gates of hell will not prevail against it. Church history bears witness to this fact, as the saints in every age have stood for the gospel of God’s grace.</p>
+                                                <p className="font-light text-sm text-justify" >{session.description}</p>
                                             </div>
                                             {
                                                 session.preacher.name && 
