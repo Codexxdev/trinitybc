@@ -36,9 +36,9 @@ const Give = () => {
             </div>
         </div>
       <div className="max-w-screen-lg 2xl:max-w-screen-xl mx-auto space-y-10 px-2">
-        <h1 className='text-2xl text-center font-semibold uppercase my-5'>Account Numbers</h1>
+        <h1 className='text-lg lg:text-xl  text-center font-semibold uppercase my-5'>Account Numbers</h1>
 
-        <div className=" grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-5 md:px-0">
+        <div className=" grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-2 md:px-0">
           {
             accounts.map(({ id, name, header, accNumber, bank}) => (
               <div key={id} className="flex flex-col space-y-4 bg-gray-700 rounded-md text-gray-300 p-5">
