@@ -90,7 +90,7 @@ const Lists = () => {
                         </div>
                         <div className="flex flex-col w-full mt-2 md:mt-5 space-y-5">
                             {
-                              events.length ?  events.map((event, index) => (
+                              events ?  events.map((event, index) => (
                                     <Link href={`/events/${event._id}`} key={event._id} >
                                         <a>
                                             <div className="flex flex-col w-full md:flex-row items-center shadow-lg hover:scale-105 
@@ -141,7 +141,7 @@ const Lists = () => {
                         </div>
                         <div className="flex flex-col w-full mt-2 md:mt-5 space-y-5">
                             {
-                              news.length ?  news.map((info, index) => (
+                              news ?  news.map((info, index) => (
                                     <Link href={`/events/news/${info._id}`} key={info._id} >
                                         <a>
                                             <div className="flex flex-col w-full md:flex-row items-center shadow-lg hover:scale-105 
@@ -162,7 +162,7 @@ const Lists = () => {
                                                         <h1 className=" text-sm mb-2 md:mb-0">{format(new Date(info.updatedAt), 'MMM, do yyyy')}</h1>
                                                     </div>
                                                     <div className="font-light text-sm text-justify">
-                                                        {parser(info.body)}
+                                                      {parser(info.body) && parser(info.body)}
                                                     </div>
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center ml-[6px]">

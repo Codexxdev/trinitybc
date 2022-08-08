@@ -9,8 +9,7 @@ import Loader from "./common/Loader"
 
 const Hero = () => {
     const [isLiveStream, setIsLiveStream] = useState(false)
-    // const { events, services, defaultEvent, defaultService } = useSelector(state => state.clientEvents)
-    let events, services, defaultEvent, defaultService
+    const { events, services, defaultEvent, defaultService } = useSelector(state => state.clientEvents)
 
     return (
         <div className="container xl:px-[2rem] lg:px-[1rem] grid gap-5 xl:gap-10 mb-5  grid-cols-1 lg:grid-cols-12 items-center w-full overflow-hidden">
