@@ -31,7 +31,7 @@ const Latest = ({latest}) => {
                 {/* resource card list */}
                 <div className="max-w-screen-lg 2xl:max-w-screen-xl  mx-auto grid gap-2 md:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {
-                        latest.map(list => (
+                       latest && latest.map(list => (
                             <div key={list._id}
                                 onClick={() => {
                                     list.category ? 

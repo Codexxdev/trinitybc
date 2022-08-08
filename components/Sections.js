@@ -74,13 +74,13 @@ const Sections = () => {
                     </div>
                     <div className="flex flex-col px-2 md:px-0 space-y-2">
                         <h1 className="uppercase text-primary-light">News</h1>
-                        <h1 className="uppercase font-medium text-xl md:text-2xl">{news.title}</h1>
+                        <h1 className="uppercase font-medium text-xl md:text-2xl">{news && news?.title}</h1>
                         <div className="text-left font-light">
                             {body && body}
                         </div>
                         <div className="flex !mt-10 space-x-3  ">
                             <h1
-                                onClick={() => router.push(`/events/news/${news._id}`)}
+                                onClick={() => router.push(`/events/news/${news && news?._id}`)}
                                 className="uppercase text-sm md:text-base  px-5 py-2 text-center
                             bg-primary-light text-[white] cursor-pointer hover:scale-105 hover:shadow-xl rounded-md ">Read More</h1>
                             <h1

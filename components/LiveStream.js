@@ -34,7 +34,7 @@ const LiveStream = ({ service, defaultService}) => {
             <div className="col-span-8 sm:col-span-7 md:col-span-6  flex flex-col sm:ml-3">
                 <div className="space-y-2">
                     <h1 className="uppercase text-xs font-light !mb-3 ">
-                        {service ?service?.service : defaultService.service}
+                        {service ? service?.service : defaultService.service}
                     </h1>
                     <h1 className="font-medium text-base uppercase  ">{truncate(service ? service?.topic : defaultService.topic, 21, 20)}</h1>
                     <h1 className=" text-xs ">{date(service ? service?.startTime : defaultService.startTime, service ? service?.endTime : defaultService.endTime) }</h1>

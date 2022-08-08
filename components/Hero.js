@@ -5,10 +5,12 @@ import LiveStream from "./LiveStream"
 import Upcoming from "./Upcoming"
 import blur from './common/blur'
 import { useSelector } from "react-redux"
+import Loader from "./common/Loader"
 
 const Hero = () => {
     const [isLiveStream, setIsLiveStream] = useState(false)
-    const { events, services, defaultEvent, defaultService } = useSelector(state => state.clientEvents)
+    // const { events, services, defaultEvent, defaultService } = useSelector(state => state.clientEvents)
+    let events, services, defaultEvent, defaultService
 
     return (
         <div className="container xl:px-[2rem] lg:px-[1rem] grid gap-5 xl:gap-10 mb-5  grid-cols-1 lg:grid-cols-12 items-center w-full overflow-hidden">
@@ -44,10 +46,14 @@ const Hero = () => {
                             <h1 className="text-sm uppercase text-center ">Live Stream Service</h1>
                         </div>
                     </div>
-                    {
-                        isLiveStream ?
-                            <LiveStream service={services[0]} defaultService={defaultService} />
-                            : <Upcoming defaultEvent={defaultEvent} event={events[0]} />
+                    {events && services && defaultEvent && defaultService ?
+                        (isLiveStream ? 
+                            <LiveStream service={services && services[0]} defaultService={defaultService} />
+                            : <Upcoming defaultEvent={defaultEvent} event={events && events[0]} />)
+                        :
+                        <div className="!mt-10">
+                            <Loader />
+                        </div>
                     }
                 </div>
                 
