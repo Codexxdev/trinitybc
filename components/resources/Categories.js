@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import blur from "../common/blur"
 
 const Categories = () => {
 
@@ -51,7 +52,7 @@ const Categories = () => {
                                         <Image src={list.image}
                                             className="object-cover rounded-t-md w-full h-full "
                                             layout="fill"
-                                            blurDataURL="data:..."
+                                            blurDataURL={blur}
                                             placeholder="blur"
                                             alt="logo" />
                                     </div>

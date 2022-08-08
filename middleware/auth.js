@@ -1,7 +1,12 @@
 import { getSession } from 'next-auth/react'
+import asyncHandler from "express-async-handler";
+import ErrorHandler from "../middleware/errorHandler"
+import Catch from "./catch"
 
 
-const isAuthenticatedUser = async (req, res, next) => {
+
+
+const isAuthenticatedUser = asyncHandler(async (req, res, next) => {
     try {
         const session = await getSession({ req })
         if (!session) {
@@ -11,22 +16,18 @@ const isAuthenticatedUser = async (req, res, next) => {
         req.user = session.user;
         next()
     } catch (error) {
-        next(error)
+        return next(new ErrorHandler('login first to access this resource', 200))
     }
 
-}
+})
 
 const authorizeRoles = (...roles) => {
-    try {
         return (req, res, next) => {
             if (!roles.includes(req.user.role)) {
                 throw new Error(`Role (${req.user.role}) is not allowed to access this resource`)
             }
             next()
         }
-    } catch (error) {
-        next(error)
-    }
 
 }
 

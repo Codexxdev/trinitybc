@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useSelector } from "react-redux"
 import parse from 'html-react-parser';
 import { useState, useEffect } from "react";
+import blur from "./common/blur"
 
 
 const Sections = () => {
@@ -39,7 +40,7 @@ const Sections = () => {
                             <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1651306706/Global/mission_c2loub.jpg"
                                 className="object-cover w-full h-full"
                                 layout="fill"
-                                blurDataURL="data:..."
+                                blurDataURL={blur}
                                 placeholder="blur"
                                 alt="logo" />
                         </div>
@@ -66,7 +67,7 @@ const Sections = () => {
                             <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1651306708/Global/give_vj04h7.jpg"
                                 className="object-cover w-full h-full"
                                 layout="fill"
-                                blurDataURL="data:..."
+                                blurDataURL={blur}
                                 placeholder="blur"
                                 alt="logo" />
                         </div>
@@ -74,9 +75,9 @@ const Sections = () => {
                     <div className="flex flex-col px-2 md:px-0 space-y-2">
                         <h1 className="uppercase text-primary-light">News</h1>
                         <h1 className="uppercase font-medium text-xl md:text-2xl">{news.title}</h1>
-                        <p className="text-left font-light">
+                        <div className="text-left font-light">
                             {body && body}
-                        </p>
+                        </div>
                         <div className="flex !mt-10 space-x-3  ">
                             <h1
                                 onClick={() => router.push(`/events/news/${news._id}`)}

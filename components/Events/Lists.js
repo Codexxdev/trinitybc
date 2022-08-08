@@ -142,7 +142,7 @@ const Lists = () => {
                         <div className="flex flex-col w-full mt-2 md:mt-5 space-y-5">
                             {
                               news.length ?  news.map((info, index) => (
-                                    <Link href={`events/news/${info._id}`} key={info._id} >
+                                    <Link href={`/events/news/${info._id}`} key={info._id} >
                                         <a>
                                             <div className="flex flex-col w-full md:flex-row items-center shadow-lg hover:scale-105 
                                             hover:shadow-xl space-y-3 md:space-y-0 md:space-x-3 h-fit bg-gray-50/50 py-3 px-3 cursor-pointer">
@@ -161,9 +161,9 @@ const Lists = () => {
                                                         <h1 className="uppercase font-medium">{info.title}</h1>
                                                         <h1 className=" text-sm mb-2 md:mb-0">{format(new Date(info.updatedAt), 'MMM, do yyyy')}</h1>
                                                     </div>
-                                                    <p className="font-light text-sm text-justify">
+                                                    <div className="font-light text-sm text-justify">
                                                         {parser(info.body)}
-                                                    </p>
+                                                    </div>
                                                     <div className="flex items-center justify-between">
                                                         <div className="flex items-center ml-[6px]">
                                                           <h1 className="text-sm italic">written by <span>{ info.author.name }</span></h1>

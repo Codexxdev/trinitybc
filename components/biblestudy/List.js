@@ -70,7 +70,7 @@ const List = () => {
                                                     <Image src={bibleStudy?.imageUrl?.url ? bibleStudy.imageUrl.url : defaultImage}
                                                         className="object-cover rounded-lg w-full h-full "
                                                         layout="fill"
-                                                        blurDataURL="data:..."
+                                                        blurDataURL={blur}
                                                         placeholder="blur"
                                                         alt="logo" />
                                                 </div>

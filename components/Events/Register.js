@@ -48,7 +48,7 @@ const Register = ({conference}) => {
                     <input
                         type="name"
                         name="name"
-                        className="w-full px-3 rounded-lg py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
+                        className="w-full px-3  py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
                         value={firstName}
                         onChange={(e) => { setFirstName(e.target.value) }}
                     />
@@ -58,7 +58,7 @@ const Register = ({conference}) => {
                     <input
                         type="name"
                         name="name"
-                        className="w-full px-3 rounded-lg py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
+                        className="w-full px-3  py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
                         value={lastName}
                         onChange={(e) => { setLastName(e.target.value) }}
                     />
@@ -68,7 +68,7 @@ const Register = ({conference}) => {
                     <input
                         type="email"
                         name="email address"
-                        className="w-full px-3 rounded-lg py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
+                        className="w-full px-3  py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
                         value={email}
                         onChange={(e) => { setEmail(e.target.value) }}
                     />
@@ -78,7 +78,7 @@ const Register = ({conference}) => {
                     <input
                         type="number"
                         name="number"
-                        className="w-full px-3 rounded-lg py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
+                        className="w-full px-3  py-2 md:text-xs xl:text-sm  border border-gray-300 focus:outline-none"
                         value={phone}
                         onChange={(e) => { setPhone(e.target.value.toString()) }}
                     />
@@ -86,13 +86,13 @@ const Register = ({conference}) => {
                 <div className="flex justify-center space-x-3 items-center !mt-5">
                     <button
                         onClick={handleSubmit}
-                        className="text-sm uppercase text-white bg-primary-light py-1 rounded-lg px-4">
+                        className="text-sm uppercase text-white bg-primary-light py-1 shadow-md hover:shadow-xl px-4">
                         {
                             loading ? <ButtonLoader /> : 'Register'
                         }
                     </button>
                     <p className="text-xs uppercase font-medium">you can also!</p>
-                    <button className="text-sm uppercase text-white bg-primary-dark py-1 rounded-lg px-4">
+                    <button className="text-sm uppercase text-white bg-primary-dark py-1 shadow-md hover:shadow-xl px-4">
                         Donate
                     </button>
                 </div>

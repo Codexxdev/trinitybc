@@ -28,10 +28,10 @@ const Body = () => {
                     <div className="flex flex-col  space-y-4">
                         <h1 className="text-center text-2xl uppercase font-medium ">Our History</h1>
                         <div className="w-full h-[300px] md:h-[400px] relative">
-                            <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1651306708/Global/church_zl8zsz.jpg"
+                            <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1659955219/travis-walser-8us8u1Tc4cE-unsplash-min_nll5dn.jpg"
                                 className="object-cover w-full h-full"
                                 layout="fill"
-                                blurDataURL="data:..."
+                                blurDataURL={blur}
                                 placeholder="blur"
                                 alt="logo" />
                         </div>
@@ -74,7 +74,7 @@ const Body = () => {
                                 <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1651306706/Global/mission_c2loub.jpg"
                                     className="object-cover w-full h-full"
                                     layout="fill"
-                                    blurDataURL="data:..."
+                                    blurDataURL={blur}
                                     placeholder="blur"
                                     alt="logo" />
                             </div>

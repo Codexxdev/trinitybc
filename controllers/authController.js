@@ -19,6 +19,13 @@ const register = asyncHandler(async (req, res) => {
 
 const currentUser = asyncHandler(async (req, res) => {
 
+    if (!req.user) { 
+        return res.status(401).json({
+            success: false,
+            message: "Unauthorized"
+        })
+    }
+
     const user = await User.findById(req.user._id)
     res.status(200).json({
         success: 'true',

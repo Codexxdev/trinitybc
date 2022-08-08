@@ -1,4 +1,5 @@
 import Image from "next/image"
+import blur from "../common/blur"
 
 const Hero = () => {
     return (
@@ -14,7 +15,7 @@ const Hero = () => {
                             <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1651306705/Global/study_yhfri9.jpg"
                                 className="object-cover w-full h-full"
                                 layout="fill"
-                                blurDataURL="data:..."
+                                blurDataURL={blur}
                                 placeholder="blur"
                                 alt="logo" />
                         </div>
