@@ -12,9 +12,9 @@ const Sections = () => {
     const { news } = useSelector(state => state.clientEvent)
 
 
-    useEffect(() => {
-        parser(news.body)
-    }, [news])
+    // useEffect(() => {
+    //     parser(news.body)
+    // }, [news])
 
     const truncate = (des) => {
         if (des.length >= 350) {
@@ -76,7 +76,7 @@ const Sections = () => {
                         <h1 className="uppercase text-primary-light">News</h1>
                         <h1 className="uppercase font-medium text-xl md:text-2xl">{news && news?.title}</h1>
                         <div className="text-left font-light">
-                            {body && body}
+                            {/* {body && body} */}
                         </div>
                         <div className="flex !mt-10 space-x-3  ">
                             <h1

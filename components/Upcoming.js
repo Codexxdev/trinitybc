@@ -25,7 +25,7 @@ const Upcoming = ({event, defaultEvent}) => {
     return (
         <div className="grid grid-cols-12 gap-2 items-center px-2 md:px-0 ">
             <div className="order-last md:order-first rounded-md col-span-4 sm:col-span-5 md:col-span-6  w-full sm:h-full h-[calc(100%-30px)] relative ">
-                <Image src={event ? event?.imageUrl?.url : defaultEvent?.imageUrl?.url}
+                    <Image src={event ? event?.imageUrl?.url : defaultEvent?.imageUrl?.url}
                     className="object-cover w-full h-full"
                     layout="fill"
                     blurDataURL={blur}
@@ -34,8 +34,8 @@ const Upcoming = ({event, defaultEvent}) => {
             </div>
             <div className="col-span-8 sm:col-span-7 md:col-span-6  flex flex-col sm:ml-3">
                 <div className="space-y-2">
-                    <h1 className="uppercase text-xs font-light !mb-3 ">{event ? event?.type : defaultEvent.type}</h1>
-                    <h1 className="font-medium text-base uppercase  ">{truncate(event ? event?.title : defaultEvent.title, 25, 24) }</h1>
+                    <h1 className="uppercase text-xs font-light !mb-3 ">{event ? event?.type : defaultEvent?.type}</h1>
+                    <h1 className="font-medium text-base uppercase  ">{ truncate(event ? event?.title : defaultEvent?.title, 25, 24) }</h1>
                     <h1 className=" text-xs ">{date(event ? event?.startDate : defaultEvent.startDate, event ? event?.endDate : defaultEvent.endDate)}</h1>
 
                     <h1 className=" text-xs !mt-8 !mb-3 capitalize ">{event ? 'Would be attending?' : 'No upcoming event at the moment'}</h1>
@@ -43,7 +43,7 @@ const Upcoming = ({event, defaultEvent}) => {
                     <div className="flex items-center space-x-3">
                         <h1
                             onClick={() => {
-                                event ? router.push(`events/${event._id}`) : router.push(`/search?keyword=${defaultEvent.topic.trim()}`)
+                                event ? router.push(`events/${event._id}`) : router.push(`/search?keyword=${defaultEvent?.topic?.trim()}`)
                             }} 
                             className="rounded-r-full text-xs  py-1 px-3
                                                 border border-primary-light text-[white]

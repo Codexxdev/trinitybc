@@ -5,10 +5,10 @@ import absoluteUrl from 'next-absolute-url'
 
 export const getClientLatest = createAsyncThunk(
     `latest/getClientLatest`,
-    async ({ req }, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
+    async (obj, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
         try {
-            const { data } = await axios.get(`${origin}/api/`)
+            const { data } = await axios.get(`/api/`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data.message)

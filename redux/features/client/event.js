@@ -20,10 +20,10 @@ export const getClientEventDetails = createAsyncThunk(
 
 export const getClientNewsDetails = createAsyncThunk(
     `event/getClientNewsDetails`,
-    async ({ req, id }, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
+    async ({ id }, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
         try {
-            const { data } = await axios.get(`${origin}/api/client/news/${id}`)
+            const { data } = await axios.get(`/api/client/news/${id}`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data.message)

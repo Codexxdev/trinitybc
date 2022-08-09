@@ -5,9 +5,9 @@ import absoluteUrl from 'next-absolute-url'
 
 export const getClientEvents = createAsyncThunk(
     `events/getClientEvents`,
-    async ({ req, month, next }, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
-        let link = `${origin}/api/client/event`
+    async ({ month, next }, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
+        let link = `/api/client/event`
 
         if (month) {
             link = link.concat(`?month=${month}`)
@@ -28,9 +28,9 @@ export const getClientEvents = createAsyncThunk(
 
 export const getClientNews = createAsyncThunk(
     `events/getClientNews`,
-    async ({ req, month, next }, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
-        let link = `${origin}/api/client/news`
+    async (obj, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
+        let link = `/api/client/news`
 
         // if (month) {
         //     link = link.concat(`?month=${month}`)
@@ -52,11 +52,11 @@ export const getClientNews = createAsyncThunk(
 
 export const getClientServices = createAsyncThunk(
     `events/getClientServices`,
-    async ({req}, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
+    async (obj, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
 
         try {
-            const { data } = await axios.get(`${origin}/api/client/service`)
+            const { data } = await axios.get(`/api/client/service`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data.message)
