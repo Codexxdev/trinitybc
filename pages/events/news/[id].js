@@ -14,7 +14,7 @@ export default function EventDetailsPage() {
     )
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
-    const id = params.id
-    await store.dispatch(getClientNewsDetails({ req, id }))
-})
+// export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
+//     const id = params.id
+//     await store.dispatch(getClientNewsDetails({ req, id }))
+// })

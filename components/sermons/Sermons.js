@@ -28,7 +28,7 @@ const Sermons = () => {
     }, [dispatch, topic, preacher, page, sort, scripture])
 
     return (
-        <div className="!mb-20  w-full h-full min-h-screen">
+        <div className="!mb-20  w-full min-h-screen h-full">
             <Hero />
             {
                 loading ?

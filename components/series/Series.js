@@ -29,7 +29,7 @@ const Series = () => {
     }, [dispatch, topic, preacher, page, sort, scripture])
 
     return (
-        <div className="!mb-20  w-full">
+        <div className="!mb-20 min-h-screen h-full w-full">
             <Hero />
             {
                 loading ?

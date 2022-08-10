@@ -41,7 +41,7 @@ const Home = () => {
 
     
     return (
-        <div className="mt-[60px] h-full  min-h-screen  !mb-20 sm:mt-20 lg:mt-24 w-full">
+        <div className="mt-[60px] min-h-screen h-full  !mb-20 sm:mt-20 lg:mt-24 w-full">
             {
                 loading
                     ?

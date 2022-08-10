@@ -31,10 +31,10 @@ const Sermon = () => {
     }, [id])
 
     return (
-        <div className="!mb-20  w-full h-full min-h-full space-y-5">
+        <div className="!mb-20  w-full min-h-screen h-full space-y-5">
             {
                 loading ?
-                    <div className="mt-20">
+                    <div className="mt-[100px]">
                         <Loader />
                     </div>
                     :

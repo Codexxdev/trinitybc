@@ -28,10 +28,10 @@ const Details = () => {
     }, [dispatch, id])
  
     return (
-        <div className="!mb-20  w-full space-y-5">
+        <div className="!mb-20 min-h-screen h-full w-full space-y-5">
             {
                 loading ?
-                    <div className="mt-20">
+                    <div className="mt-[100px]">
                         <Loader />
                     </div>
                     :
