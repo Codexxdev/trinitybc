@@ -1,6 +1,8 @@
 import Layout from "../components/layout/Layout";
 import { getSession } from 'next-auth/react'
 import SignIn from "../components/auth/SignIn";
+import Head from "next/head";
+
 
 
 export default function SignInPage() {
