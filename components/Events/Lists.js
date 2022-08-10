@@ -35,6 +35,7 @@ const Lists = () => {
                     layout="fill"
                     blurDataURL={blur}
                     placeholder="blur"
+                    priority
                     alt="logo" />
             </div>
         ))
@@ -101,6 +102,7 @@ const Lists = () => {
                                                         layout="fill"
                                                         blurDataURL={blur}
                                                         placeholder="blur"
+                                                        priority
                                                         alt="logo" />
                                                     <h1 className="hidden md:block absolute font-medium text-center text-[10px] uppercase px-1 py-2 text-white bg-gray-900/70">{event.type}</h1>
                                                 </div>
@@ -151,7 +153,8 @@ const Lists = () => {
                                                         className="object-cover w-full h-full "
                                                         layout="fill"
                                                         blurDataURL={blur}
-                                                        placeholder="blur"
+                                                      placeholder="blur"
+                                                      priority
                                                         alt="logo" />
                                                     <h1 className="hidden md:block absolute font-medium text-center text-[10px] uppercase px-1 py-2 text-white bg-gray-900/70">news</h1>
                                                 </div>

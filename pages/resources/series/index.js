@@ -16,8 +16,8 @@ export default function SeriesPage() {
     )
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, query }) => {
-    const { topic, preacher, page, sort, scripture } = query
-    await store.dispatch(getClientSeries({ req, topic, preacher, page, sort, scripture }))
-    await store.dispatch(getSeriesFilters({ req }))
-})
+// export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, query }) => {
+//     const { topic, preacher, page, sort, scripture } = query
+//     await store.dispatch(getClientSeries({ req, topic, preacher, page, sort, scripture }))
+//     await store.dispatch(getSeriesFilters({ req }))
+// })

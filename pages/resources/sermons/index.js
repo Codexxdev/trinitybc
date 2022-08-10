@@ -16,8 +16,8 @@ export default function SermonPage() {
 }
 
 
-export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, query }) => {
-    const { topic, preacher, page, sort, scripture} = query
-    await store.dispatch(getClientSermons({ req, page, sort, topic, preacher, scripture}))
-    await store.dispatch(getSermonFilters({req}))
-})
+// export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, query }) => {
+//     const { topic, preacher, page, sort, scripture} = query
+//     await store.dispatch(getClientSermons({ req, page, sort, topic, preacher, scripture}))
+//     await store.dispatch(getSermonFilters({req}))
+// })

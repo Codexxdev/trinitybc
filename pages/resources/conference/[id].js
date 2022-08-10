@@ -15,7 +15,7 @@ export default function SermonPage() {
 }
 
 
-export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
-    const id = params.id
-    await store.dispatch(getClientConferenceDetails({ req, id }))
-})
+// export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
+//     const id = params.id
+//     await store.dispatch(getClientConferenceDetails({ req, id }))
+// })

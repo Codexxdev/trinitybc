@@ -6,23 +6,30 @@ import Body from "./Body"
 import { useDispatch } from "react-redux";
 import { loadUser } from "../../redux/features/currentUser";
 import { useRouter } from 'next/router'
+import { getClientSeriesDetails } from "../../redux/features/client/seriesDetails"
+import Loader from "../common/Loader"
 
 
 
 const Details = () => {
-
-    const { series } = useSelector(state => state.clientSeriesDetails)
-
-    const [current, setCurrent] = useState(series.sermons[0])
+    const [series, setSeries] = useState({})
+    const [current, setCurrent] = useState({})
+    const [loading, setLoading] = useState(true)
 
     const dispatch = useDispatch()
     const router = useRouter()
+    const { index, id } = router.query
+
     useEffect(() => {
-        if (router.query.index) {
-            setCurrent(series.sermons[router.query.index])
-        }
-        dispatch(loadUser())
-    }, [])
+       setLoading(true)
+        dispatch(loadUser()).then(() => {
+            dispatch(getClientSeriesDetails({ id })).then((res) => {
+                setSeries(res.payload?.series)
+                setCurrent(res.payload?.series?.sermons[index || 0])
+                setLoading(false)
+            })
+        })
+    }, [dispatch, id, index])
 
 
     
@@ -46,9 +53,19 @@ const Details = () => {
    
     return (
         <div className={` !mb-20 w-full`}>
-            <Player resource={current} />
-            <Body series={series} scrollToTop={scrollToTop} scrollToAll={scrollToAll}
-                current={current} changeCurrent={changeCurrent} />
+            {
+                loading ?
+                    <div className="mt-20">
+                        <Loader />
+                    </div>
+                    :
+                    <>
+                        <Player resource={current} />
+                        <Body series={series} scrollToTop={scrollToTop} scrollToAll={scrollToAll}
+                            current={current} changeCurrent={changeCurrent} />
+                    </>
+            }
+            
         </div>
     )
 }

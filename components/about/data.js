@@ -1,7 +1,7 @@
 const ministersData = [
     {
         name: "Abutu Peter Joshua",
-        image: "https://res.cloudinary.com/dk6uhtgvo/image/upload/v1653706450/iud1hinxph2r6jedtfgl.jpg",
+        image: "/img/pastor.jpg",
         role: "Missionary/Pastor",
         id: 1
     },

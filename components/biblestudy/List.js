@@ -61,6 +61,7 @@ const List = () => {
                                                                 layout="fill"
                                                                 blurDataURL={blur}
                                                                 placeholder="blur"
+                                                                priority
                                                                 alt="logo" />
                                                         </div>
                                                         <h1 className="text-sm  font-light">{bibleStudy.preacher?.name}</h1>
@@ -72,6 +73,7 @@ const List = () => {
                                                         layout="fill"
                                                         blurDataURL={blur}
                                                         placeholder="blur"
+                                                        priority
                                                         alt="logo" />
                                                 </div>
 

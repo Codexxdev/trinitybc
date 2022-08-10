@@ -5,9 +5,9 @@ import absoluteUrl from 'next-absolute-url'
 
 export const getClientSermons = createAsyncThunk(
     `sermons/getClientSermons`,
-    async ({ req, topic, preacher, scripture, page=1, sort = 'newest'}, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
-        let link = `${origin}/api/client/sermon?page=${page}&sort=${sort}`
+    async ({ topic, preacher, scripture, page=1, sort = 'newest'}, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
+        let link = `/api/client/sermon?page=${page}&sort=${sort}`
 
         if (topic) {
             link = link.concat(`&topic=${topic}`)
@@ -32,10 +32,10 @@ export const getClientSermons = createAsyncThunk(
 
 export const getSermonFilters = createAsyncThunk(
     `sermons/getSermonFilters`,
-    async ({ req }, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
+    async (obj, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
         try {
-            const { data } = await axios.get(`${origin}/api/client/sermon/filters`)
+            const { data } = await axios.get(`/api/client/sermon/filters`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data.message)

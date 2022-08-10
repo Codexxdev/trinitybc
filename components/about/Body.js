@@ -5,7 +5,6 @@ import blur from '../common/blur'
 
 
 
-const leaders = [1,2,3,4,5,6,7]
 
 const Body = () => {
     return (
@@ -28,11 +27,13 @@ const Body = () => {
                     <div className="flex flex-col  space-y-4">
                         <h1 className="text-center text-2xl uppercase font-medium ">Our History</h1>
                         <div className="w-full h-[300px] md:h-[400px] relative">
-                            <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1659955219/travis-walser-8us8u1Tc4cE-unsplash-min_nll5dn.jpg"
-                                className="object-cover w-full h-full"
+                            <Image src="/img/church.jpg"
+                                className=" w-full h-full"
                                 layout="fill"
+                                objectFit="cover"
                                 blurDataURL={blur}
                                 placeholder="blur"
+                                priority
                                 alt="logo" />
                         </div>
                         <p className=" font-light leading-relaxed px-3 md:px-5">Trinity Baptist Church was birthed on the 9th of December 2018, this follows the ordination of the Missionary Pastor Peter Joshua Abutu on he 4th of March, the same year by the leadership of the sending Church, Kabwata Baptist Church, Lusaka Zambia. About eight persons gathered in Pastor Abutu’s living room on the 3rd of June 2018 for prayer and Bible study signalling the beginning of the work.In that meeting, intentions, missions and visions for the work were shared and prayers offered.We continued meeting every Sunday evening till the first Sunday morning service on the 9th of December 2018 at the Arcade. TBCA now worship and operates from a rented facility at no 4 Juba street Suncity Estate Abuja-FCT, Nigeria. </p>

@@ -14,7 +14,7 @@ export default function BibleStudyPage() {
     )
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
-    const id = params.id
-    await store.dispatch(getClientBibleStudyDetails({ req, id }))
-})
+// export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
+//     const id = params.id
+//     await store.dispatch(getClientBibleStudyDetails({ req, id }))
+// })

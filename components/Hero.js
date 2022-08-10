@@ -4,9 +4,6 @@ import { useState } from "react"
 import LiveStream from "./LiveStream"
 import Upcoming from "./Upcoming"
 import blur from './common/blur'
-import { useSelector, useDispatch } from "react-redux"
-import Loader from "./common/Loader"
-import { useEffect } from "react"
 
 const Hero = ({ events, services, defaultEvent, defaultService }) => {
     const [isLiveStream, setIsLiveStream] = useState(false)
@@ -61,12 +58,14 @@ const Hero = ({ events, services, defaultEvent, defaultService }) => {
         {/* col 2 */}
             <div className="lg:col-span-6 xl:col-span-7">
                 <div className="w-full h-[250px] sm:h-[400px] lg:h-[500px] relative">
-                    <Image src="https://res.cloudinary.com/dk6uhtgvo/image/upload/v1655537083/Global/aaron-burden-vKBdY7e7KFk-unsplash_1_hbztnw.jpg"
+                    <Image src="/img/hero.jpg"
                         className="object-cover w-full h-full"
                         layout="fill"
                         blurDataURL={blur}
                         placeholder="blur"
-                        alt="logo" />
+                        priority
+                        alt="logo"
+                    />
                 </div>
             </div>
         </div>

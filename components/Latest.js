@@ -50,7 +50,8 @@ const Latest = ({latest}) => {
                                         className="object-cover w-full h-full rounded-lg md:rounded-none md:rounded-t-md"
                                         layout="fill"
                                         blurDataURL={blur}
-                                        placeholder="blur"
+                                       placeholder="blur"
+                                       priority
                                         alt="logo" />
                                     <div className=" hidden md:block uppercase text-xs absolute py-1 px-4 top-3 left-3  bg-white/70">
                                         <div className="flex space-x-1">
@@ -79,7 +80,8 @@ const Latest = ({latest}) => {
                                                 className="object-cover w-full h-full rounded-full"
                                                 layout="fill"
                                                 blurDataURL={blur}
-                                                placeholder="blur"
+                                               placeholder="blur"
+                                               priority
                                                 alt="logo" />
                                         </div>
                                         <h1 className="text-sm font-light capitalize md:text-base">{list.preacher.name}</h1>

@@ -5,10 +5,10 @@ import absoluteUrl from 'next-absolute-url'
 
 export const getClientSermonDetails = createAsyncThunk(
     `sermon/getClientSermonDetails`,
-    async ({ req, id }, { rejectWithValue }) => {
-        const { origin } = absoluteUrl(req)
+    async ({ id }, { rejectWithValue }) => {
+        // const { origin } = absoluteUrl(req)
         try {
-            const { data } = await axios.get(`${origin}/api/client/sermon/${id}`)
+            const { data } = await axios.get(`/api/client/sermon/${id}`)
             return data
         } catch (error) {
             return rejectWithValue(error.response.data.message)

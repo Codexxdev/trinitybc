@@ -2,26 +2,34 @@ import { useEffect } from "react"
 import { useState } from "react"
 import Player from "../Player"
 import Body from "../series/Body"
-import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux";
 import { loadUser } from "../../redux/features/currentUser";
 import { useRouter } from 'next/router'
+import { getClientConferenceDetails } from "../../redux/features/client/conference"
+import Loader from "../common/Loader"
 
 
 const Details = () => {
 
-    const { conference } = useSelector(state => state.clientConference)
-
-    const [current, setCurrent] = useState(conference.sermons[0])
+    const [current, setCurrent] = useState({})
+    const [conference, setConference] = useState({})
+    const [loading, setLoading] = useState(true)
 
     const dispatch = useDispatch()
     const router = useRouter()
+    const { id, index } = router.query
+
+
     useEffect(() => {
-        if (router.query.index) { 
-            setCurrent(conference.sermons[router.query.index])
-        }
-        dispatch(loadUser())
-    }, [])
+        setLoading(true)
+        dispatch(loadUser()).then(() => {
+            dispatch(getClientConferenceDetails({ id })).then((res) => {
+                setConference(res?.payload?.conference)
+                setCurrent(res?.payload?.conference?.sermons[index || 0])
+                setLoading(false)
+            })
+        })
+    }, [dispatch, id, index])
 
     const changeCurrent = (index) => {
         setCurrent(conference.sermons[index])
@@ -43,9 +51,19 @@ const Details = () => {
 
     return (
         <div className={` !mb-20 w-full`}>
-            <Player resource={current} />
-            <Body series={conference} scrollToTop={scrollToTop} scrollToAll={scrollToAll}
-                current={current} changeCurrent={changeCurrent} />
+            {
+                loading ?
+                    <div className="mt-20">
+                        <Loader />
+                    </div>
+                    :
+                    <>
+                        <Player resource={current} />
+                        <Body series={conference} scrollToTop={scrollToTop} scrollToAll={scrollToAll}
+                            current={current} changeCurrent={changeCurrent} />
+                    </>
+            }
+            
         </div>
     )
 }

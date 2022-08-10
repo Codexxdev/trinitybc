@@ -5,7 +5,12 @@ import SignIn from "../components/auth/SignIn";
 
 export default function SignInPage() {
     return (
-        <SignIn />
+        <div>
+            <Head>
+                <title>Trinity Baptist Church Abuja | Sign In</title>
+            </Head>
+            <SignIn />
+        </div>
     )
 }
 

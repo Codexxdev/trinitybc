@@ -8,14 +8,14 @@ export default function SermonPage() {
     return (
         <div >
             <Head>
-                <title>TBC | Sermon</title>
+                <title>Trinity Baptist Church Abuja | Sermon</title>
             </Head>
             <Sermon />
         </div>
     )
 }
 
-export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
-    const id = params.id
-    await store.dispatch(getClientSermonDetails({ req, id }))
-})
+// export const getServerSideProps = wrapper.getServerSideProps(store => async ({ req, params }) => {
+//     const id = params.id
+//     await store.dispatch(getClientSermonDetails({ req, id }))
+// })

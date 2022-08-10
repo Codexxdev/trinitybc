@@ -41,6 +41,7 @@ const List = () => {
                     layout="fill"
                     blurDataURL={blur}
                     placeholder="blur"
+                    priority
                     alt="logo" />
             </div>
         ))
@@ -72,6 +73,7 @@ const List = () => {
                                                         layout="fill"
                                                         blurDataURL={blur}
                                                         placeholder="blur"
+                                                        priority
                                                         alt="logo" />
                                                 </div>
                                                 <div className="w-full  md:p-5 space-y-2">
