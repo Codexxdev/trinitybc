@@ -34,9 +34,9 @@ const Pagination = ({ resPerPage, page, totalItems, keyword }) => {
                 firstPageText='First'
                 lastPageText= 'Last'
                 innerClass=' space-x-1 flex rounded-r-lg rounded-l-lg'
-                activeClass='bg-[#0d6efd]'
-                itemClass='border border-[#0d6efd]/50 py-1 px-3'
-                linkClass='text-[#0d6efd]'
+                activeClass='bg-[#5481A8]'
+                itemClass='border border-[#5481A8]/50 py-1 px-3'
+                linkClass='text-[#5481A8]'
                 itemClassLast="rounded-l rounded-2xl"
                 itemClassFirst= "rounded-r rounded-2xl"
                 activeLinkClass="!text-[#ffffff]"
